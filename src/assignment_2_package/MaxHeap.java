@@ -4,9 +4,7 @@
 package assignment_2_package;
 import java.util.Arrays;
 
-/**
- * 
- */
+
 public class MaxHeap<T extends Comparable<? super T>> implements HeapInterface<T> {
 	private T[] heap;	// ignore heap[0]
 	private int lastIndex;	// index of last entry and number of entries
@@ -33,7 +31,6 @@ public class MaxHeap<T extends Comparable<? super T>> implements HeapInterface<T
 	      heap = tempHeap;
 	      lastIndex = 0;
 	      integrityOK = true;
-
 	}
 	
 	// constructor using the entry length as the heap size

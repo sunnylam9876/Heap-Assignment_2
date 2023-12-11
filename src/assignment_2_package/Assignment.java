@@ -6,9 +6,8 @@ package assignment_2_package;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-/**
- * 
- */
+
+
 public class Assignment implements Comparable<Assignment> {
 	private String course;
 	private String task;
@@ -47,18 +46,11 @@ public class Assignment implements Comparable<Assignment> {
 	
 	@Override
 	public int compareTo(Assignment other) {
-		// Compare assignments based on due dates
-		// Earlier due dates have higher priority
-		
-		// multiply the value by -1 so that the order is reversed		
-		//return this.dueDate.compareTo(other.dueDate) * -1;	
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-		LocalDate thisDate = LocalDate.parse(this.dueDate, formatter);
-		LocalDate otherDate = LocalDate.parse(other.dueDate, formatter);
-		
-		return otherDate.compareTo(thisDate);
-		
-	}
+    	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate thisDate = LocalDate.parse(this.dueDate, formatter);
+        LocalDate otherDate = LocalDate.parse(other.dueDate, formatter);
+        return otherDate.compareTo(thisDate);
+    }
 	
 	@Override
 	public String toString() {
